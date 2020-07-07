@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController {
 
@@ -15,7 +16,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func buttonTapped(_ sender: Any) {
+    @IBAction func openSafariButtonTapped(_ sender: Any) {
+        if let url = URL(string: "https://beta.apple.com") {
+            let safariViewController = SFSafariViewController(url: url)
+            present(safariViewController, animated: true, completion: nil)
+        }
     }
     
 }

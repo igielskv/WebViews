@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdW-ug-Lsw">
-                                <rect key="frame" x="164.66666666666666" y="391" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="147" y="391" width="81" height="30"/>
+                                <state key="normal" title="Open Safari"/>
                                 <connections>
-                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vV6-v4-nTj"/>
+                                    <action selector="openSafariButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HDD-gn-VkW"/>
                                 </connections>
                             </button>
                         </subviews>
