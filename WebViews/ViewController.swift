@@ -10,13 +10,16 @@ import UIKit
 import SafariServices
 import WebKit
 
-class ViewController: UIViewController, SFSafariViewControllerDelegate {
+class ViewController: UIViewController, SFSafariViewControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        textField.delegate = self
         
         if let url = URL(string: "https://beta.apple.com") {
             webView.load(URLRequest(url: url))
@@ -40,5 +43,17 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         if let url = URL(string: "https://beta.apple.com") {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
+    }
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        webView.goBack()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let text = textField.text, let url = URL(string: text) {
+            webView.load(URLRequest(url: url))
+        }
+        textField.resignFirstResponder()
+        return false
     }
 }
