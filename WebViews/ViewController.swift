@@ -8,12 +8,19 @@
 
 import UIKit
 import SafariServices
+import WebKit
 
 class ViewController: UIViewController, SFSafariViewControllerDelegate {
-
+    
+    @IBOutlet weak var webView: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        if let url = URL(string: "https://beta.apple.com") {
+            webView.load(URLRequest(url: url))
+        }
     }
 
     @IBAction func openSafariViewControllerButtonTapped(_ sender: Any) {
