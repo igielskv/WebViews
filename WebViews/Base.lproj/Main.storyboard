@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tow-ah-AGV">
-                                <rect key="frame" x="16" y="219" width="343" height="374"/>
+                                <rect key="frame" x="16" y="60" width="343" height="702"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IsU-jS-0tI">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="34"/>
@@ -37,25 +37,22 @@
                                         </subviews>
                                     </stackView>
                                     <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m37-4L-DSR">
-                                        <rect key="frame" x="0.0" y="42" width="343" height="256"/>
+                                        <rect key="frame" x="0.0" y="42" width="343" height="584"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="256" id="f8a-v6-hKh"/>
-                                        </constraints>
                                         <wkWebViewConfiguration key="configuration">
                                             <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                             <wkPreferences key="preferences"/>
                                         </wkWebViewConfiguration>
                                     </wkWebView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdW-ug-Lsw">
-                                        <rect key="frame" x="76.666666666666686" y="306" width="190" height="30"/>
+                                        <rect key="frame" x="76.666666666666686" y="634" width="190" height="30"/>
                                         <state key="normal" title="Open Safari View Controller"/>
                                         <connections>
                                             <action selector="openSafariViewControllerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tig-Sg-3iQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXL-Jw-7jF">
-                                        <rect key="frame" x="131" y="344" width="81" height="30"/>
+                                        <rect key="frame" x="131" y="672" width="81" height="30"/>
                                         <state key="normal" title="Open Safari"/>
                                         <connections>
                                             <action selector="openSafariButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="716-7a-XeW"/>
@@ -70,8 +67,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="tow-ah-AGV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="8KJ-6o-5Af"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tow-ah-AGV" secondAttribute="trailing" constant="16" id="LJ1-IY-Pdz"/>
-                            <constraint firstItem="tow-ah-AGV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RMu-Je-Bn7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tow-ah-AGV" secondAttribute="bottom" constant="16" id="gzH-H3-s0z"/>
                             <constraint firstItem="tow-ah-AGV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hP5-x4-081"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
