@@ -9,19 +9,29 @@
 import UIKit
 import SafariServices
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SFSafariViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func openSafariButtonTapped(_ sender: Any) {
+    @IBAction func openSafariViewControllerButtonTapped(_ sender: Any) {
         if let url = URL(string: "https://beta.apple.com") {
             let safariViewController = SFSafariViewController(url: url)
+            safariViewController.delegate = self
             present(safariViewController, animated: true, completion: nil)
         }
     }
     
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        print("finished!")
+    }
+    
+    // Open full Safari application on system level
+    @IBAction func openSafariButtonTapped(_ sender: Any) {
+        if let url = URL(string: "https://beta.apple.com") {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
 }
-
